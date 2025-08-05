@@ -38,22 +38,22 @@ export default function Skills() {
         {
           name: "React.js",
           icon: <FaReact className="text-blue-400" />,
-          level: 90,
+          level: 80,
         },
         {
           name: "Next.js",
           icon: <SiNextdotjs className="text-white" />,
-          level: 85,
+          level: 75,
         },
         {
           name: "JavaScript",
           icon: <FaJs className="text-yellow-400" />,
-          level: 90,
+          level: 70,
         },
         {
           name: "TypeScript",
           icon: <SiTypescript className="text-blue-500" />,
-          level: 80,
+          level: 50,
         },
         {
           name: "HTML5",
@@ -63,12 +63,12 @@ export default function Skills() {
         {
           name: "CSS3",
           icon: <FaCss3Alt className="text-blue-500" />,
-          level: 90,
+          level: 80,
         },
         {
           name: "Tailwind CSS",
           icon: <SiTailwindcss className="text-cyan-400" />,
-          level: 85,
+          level: 75,
         },
       ],
     },
@@ -79,22 +79,22 @@ export default function Skills() {
         {
           name: "Node.js",
           icon: <FaNodeJs className="text-green-500" />,
-          level: 85,
+          level: 65,
         },
         {
           name: "Express.js",
           icon: <SiExpress className="text-gray-400" />,
-          level: 80,
+          level: 60,
         },
         {
           name: "Python",
           icon: <FaPython className="text-yellow-400" />,
-          level: 75,
+          level: 35,
         },
         {
           name: "RESTful APIs",
           icon: <Code2 className="text-[#00ff00]" />,
-          level: 85,
+          level: 80,
         },
       ],
     },
@@ -105,17 +105,12 @@ export default function Skills() {
         {
           name: "MongoDB",
           icon: <SiMongodb className="text-green-500" />,
-          level: 85,
-        },
-        {
-          name: "PostgreSQL",
-          icon: <SiPostgresql className="text-blue-500" />,
           level: 75,
         },
         {
           name: "Firebase",
           icon: <Database className="text-orange-400" />,
-          level: 70,
+          level: 60,
         },
       ],
     },
@@ -152,13 +147,12 @@ export default function Skills() {
         {
           name: "Git & GitHub",
           icon: <FaGitAlt className="text-orange-500" />,
-          level: 90,
+          level: 80,
         },
-        { name: "AWS", icon: <FaAws className="text-orange-400" />, level: 70 },
         {
           name: "Docker",
           icon: <FaDocker className="text-blue-400" />,
-          level: 65,
+          level: 45,
         },
         {
           name: "VS Code",
@@ -257,10 +251,10 @@ export default function Skills() {
           <h3 className="text-lg font-semibold mb-4">Currently Learning</h3>
           <div className="flex flex-wrap justify-center gap-4">
             <span className="px-4 py-2 bg-[#00ff00]/10 border border-[#00ff00] rounded-full text-sm">
-              Machine Learning
+              Agentic Workflow
             </span>
             <span className="px-4 py-2 bg-[#00ff00]/10 border border-[#00ff00] rounded-full text-sm">
-              Web3 Development
+              Web Development
             </span>
             <span className="px-4 py-2 bg-[#00ff00]/10 border border-[#00ff00] rounded-full text-sm">
               Advanced AI Agents
