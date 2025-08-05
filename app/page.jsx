@@ -18,7 +18,7 @@ export default function LBDCodes() {
           <div className="w-full lg:w-3/5 p-2 lg:p-6">
             <h1 className="my-2 text-base text-[#00ff00]">Hello &#128075;</h1>
             <h1 className="my-2 text-3xl">I'm Lambe Boluwatife</h1>
-            <h6 className="my-2 text-base md:text-lg text-justify">
+            <h6 className="my-2 text-sm text-justify">
               I am a Full-Stack Developer passionate about building responsive
               web applications and AI-powered agents. I specialize in the MERN
               stack and have hands-on experience creating intelligent agents
