@@ -35,7 +35,7 @@ export default function Projects() {
         "RESTful APIs",
         "Git & GitHub",
       ],
-      category: "fullstack",
+      category: ["fullstack"],
       liveUrl: "https://eventful-lbd.netlify.app",
       githubUrl:
         "https://github.com/lambeboluwatife/altschools-eventful-frontend",
@@ -57,7 +57,7 @@ export default function Projects() {
         "CoPilotKit",
         "Arcade",
       ],
-      category: "ai",
+      category: ["ai"],
       liveUrl: "https://case-study-agent.netlify.app/",
       githubUrl: "https://github.com/lambeboluwatife/case-study-frontend",
       date: "2025",
@@ -84,7 +84,7 @@ export default function Projects() {
         "CoPilotKit",
         "Arcade",
       ],
-      category: "fullstack",
+      category: ["fullstack"],
       liveUrl: "https://lambeboluwatife.github.io/GKAI/",
       githubUrl: "https://github.com/lambeboluwatife/GKAI/",
       date: "2023",
@@ -104,7 +104,7 @@ export default function Projects() {
         "HTML5",
         "Tailwind CSS",
       ],
-      category: "frontend",
+      category: ["frontend"],
       liveUrl: "https://hirewave-merge.netlify.app/",
       githubUrl: "https://github.com/lambeboluwatife/hirewave-merge",
       date: "2023",
@@ -130,7 +130,7 @@ export default function Projects() {
         "HTML5",
         "Tailwind CSS",
       ],
-      category: "open-source",
+      category: ["open-source", "fullstack"],
       liveUrl: null,
       githubUrl: "https://github.com/lambeboluwatife/lbdflix",
       date: "2023",
@@ -150,7 +150,7 @@ export default function Projects() {
         "TypeScript",
         "open-source",
       ],
-      category: "open-source",
+      category: ["open-source", "ai"],
       liveUrl: null,
       githubUrl: "https://github.com/lambeboluwatife/mastra-ai-tool-examples",
       date: "2025",
@@ -163,29 +163,30 @@ export default function Projects() {
     {
       id: "fullstack",
       name: "Full-Stack",
-      count: projects.filter((p) => p.category === "fullstack").length,
+      count: projects.filter((p) => p.category.includes("fullstack")).length,
     },
     {
       id: "ai",
       name: "AI",
-      count: projects.filter((p) => p.category === "ai").length,
+      count: projects.filter((p) => p.category.includes("ai")).length,
     },
     {
       id: "frontend",
       name: "Frontend",
-      count: projects.filter((p) => p.category === "frontend").length,
+      count: projects.filter((p) => p.category.includes("frontend")).length,
     },
     {
       id: "open-source",
       name: "Open Source",
-      count: projects.filter((p) => p.category === "open-source").length,
+      count: projects.filter((p) => p.category.includes("open-source")).length,
     },
   ];
 
+  // Fixed filtering logic
   const filteredProjects =
     activeFilter === "all"
       ? projects
-      : projects.filter((project) => project.category === activeFilter);
+      : projects.filter((project) => project.category.includes(activeFilter));
 
   const getTechIcon = (tech) => {
     const iconMap = {
@@ -356,7 +357,7 @@ export default function Projects() {
           </div>
           <div className="text-center p-6 border border-white rounded-lg hover:border-[#00ff00] transition duration-300">
             <h4 className="text-2xl font-bold text-[#00ff00] mb-2">
-              {projects.filter((p) => p.category === "ai").length}
+              {projects.filter((p) => p.category.includes("ai")).length}
             </h4>
             <p className="text-sm text-gray-400">AI Projects</p>
           </div>
