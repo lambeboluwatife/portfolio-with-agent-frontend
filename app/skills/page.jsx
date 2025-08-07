@@ -16,7 +16,6 @@ import {
   FaHtml5,
   FaCss3Alt,
   FaGitAlt,
-  FaAws,
   FaDocker,
   FaPython,
 } from "react-icons/fa6";
@@ -26,7 +25,6 @@ import {
   SiExpress,
   SiTailwindcss,
   SiTypescript,
-  SiPostgresql,
 } from "react-icons/si";
 
 export default function Skills() {
