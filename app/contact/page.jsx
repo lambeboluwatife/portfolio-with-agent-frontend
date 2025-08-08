@@ -8,6 +8,7 @@ import {
   FaSquareGithub,
 } from "react-icons/fa6";
 import { useState } from "react";
+import Header from "../components/Header";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -33,6 +34,7 @@ export default function Contact() {
 
   return (
     <main className="min-h-screen p-4 lg:p-10 flex flex-col items-center font-poppins">
+      <Header />
       <div className="w-full max-w-6xl">
         <div className="flex items-center justify-between mb-8">
           <Link
@@ -63,7 +65,7 @@ export default function Contact() {
 
             <div className="space-y-6 mt-8">
               <div className="flex items-center space-x-4">
-                <div className="p-3 border border-white rounded-lg">
+                <div className="p-3 border dark:border-white rounded-lg">
                   <Mail size={24} className="text-[#00ff00]" />
                 </div>
                 <div>
@@ -73,7 +75,7 @@ export default function Contact() {
               </div>
 
               <div className="flex items-center space-x-4">
-                <div className="p-3 border border-white rounded-lg">
+                <div className="p-3 border dark:border-white rounded-lg">
                   <Phone size={24} className="text-[#00ff00]" />
                 </div>
                 <div>
@@ -83,7 +85,7 @@ export default function Contact() {
               </div>
 
               <div className="flex items-center space-x-4">
-                <div className="p-3 border border-white rounded-lg">
+                <div className="p-3 border dark:border-white rounded-lg">
                   <MapPin size={24} className="text-[#00ff00]" />
                 </div>
                 <div>
@@ -96,22 +98,22 @@ export default function Contact() {
             <div className="mt-8">
               <h3 className="text-sm font-bold mb-4">Connect on Social Media</h3>
               <div className="flex space-x-4">
-                <div className="bg-[#171717]/60 hover:bg-[#00ff00] rounded-full p-3 transition duration-300">
+                <div className="dark:bg-[#171717]/60 hover:bg-[#00ff00] rounded-full p-3 transition duration-300">
                   <Link href="https://twitter.com/Danibholie">
                     <FaXTwitter size={20} />
                   </Link>
                 </div>
-                <div className="bg-[#171717]/60 hover:bg-[#00ff00] rounded-full p-3 transition duration-300">
+                <div className="dark:bg-[#171717]/60 hover:bg-[#00ff00] rounded-full p-3 transition duration-300">
                   <Link href="https://www.instagram.com/lbd_codes/">
                     <FaSquareInstagram size={20} />
                   </Link>
                 </div>
-                <div className="bg-[#171717]/60 hover:bg-[#00ff00] rounded-full p-3 transition duration-300">
+                <div className="dark:bg-[#171717]/60 hover:bg-[#00ff00] rounded-full p-3 transition duration-300">
                   <Link href="https://www.linkedin.com/in/lambe-boluwatife-870b6136">
                     <FaLinkedin size={20} />
                   </Link>
                 </div>
-                <div className="bg-[#171717]/60 hover:bg-[#00ff00] rounded-full p-3 transition duration-300">
+                <div className="dark:bg-[#171717]/60 hover:bg-[#00ff00] rounded-full p-3 transition duration-300">
                   <Link href="https://github.com/lambeboluwatife">
                     <FaSquareGithub size={20} />
                   </Link>
@@ -136,7 +138,7 @@ export default function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-transparent border border-white rounded-lg focus:border-[#00ff00] focus:outline-none transition duration-300 text-sm"
+                    className="w-full px-4 py-3 bg-transparent border dark:border-white rounded-lg focus:border-[#00ff00] focus:outline-none transition duration-300 text-sm"
                     placeholder="Your full name"
                   />
                 </div>
@@ -151,7 +153,7 @@ export default function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-transparent border border-white rounded-lg focus:border-[#00ff00] focus:outline-none transition duration-300 text-sm"
+                    className="w-full px-4 py-3 bg-transparent border dark:border-white rounded-lg focus:border-[#00ff00] focus:outline-none transition duration-300 text-sm"
                     placeholder="your.email@example.com"
                   />
                 </div>
@@ -168,7 +170,7 @@ export default function Contact() {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-transparent border border-white rounded-lg focus:border-[#00ff00] focus:outline-none transition duration-300 text-sm"
+                  className="w-full px-4 py-3 bg-transparent border dark:border-white rounded-lg focus:border-[#00ff00] focus:outline-none transition duration-300 text-sm"
                   placeholder="What's this about?"
                 />
               </div>
@@ -184,7 +186,7 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   rows={6}
-                  className="w-full px-4 py-3 bg-transparent border border-white rounded-lg focus:border-[#00ff00] focus:outline-none transition duration-300 text-sm resize-none"
+                  className="w-full px-4 py-3 bg-transparent border dark:border-white rounded-lg focus:border-[#00ff00] focus:outline-none transition duration-300 text-sm resize-none"
                   placeholder="Tell me about your project, idea, or just say hello..."
                 />
               </div>

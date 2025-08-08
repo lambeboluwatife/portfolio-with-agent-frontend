@@ -13,6 +13,7 @@ import {
 } from "react-icons/si";
 import { useState } from "react";
 import Footer from "../components/Footer";
+import Header from "../components/Header";
 
 export default function Projects() {
   const [activeFilter, setActiveFilter] = useState("all");
@@ -205,7 +206,7 @@ export default function Projects() {
   };
 
   const ProjectCard = ({ project }) => (
-    <div className="border border-white rounded-lg overflow-hidden hover:border-[#00ff00] transition duration-300 group">
+    <div className="border dark:border-white rounded-lg overflow-hidden hover:border-[#00ff00] transition duration-300 group">
       <div className="relative">
         <div className="w-full h-48 bg-gray-800 flex items-center justify-center">
           <Image
@@ -277,7 +278,7 @@ export default function Projects() {
             href={project.githubUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center space-x-1 px-3 py-2 border border-white text-xs font-semibold rounded hover:border-[#00ff00] hover:text-[#00ff00] transition duration-300"
+            className="flex items-center space-x-1 px-3 py-2 border dark:border-white text-xs font-semibold rounded hover:border-[#00ff00] hover:text-[#00ff00] transition duration-300"
           >
             <Github size={14} />
             <span>View Code</span>
@@ -289,6 +290,7 @@ export default function Projects() {
 
   return (
     <main className="min-h-screen p-4 lg:p-10 flex flex-col items-center font-poppins">
+      <Header />
       <div className="w-full max-w-7xl">
         <div className="flex items-center justify-between mb-8">
           <Link
@@ -326,7 +328,7 @@ export default function Projects() {
               className={`px-4 py-2 text-sm font-medium rounded-full transition duration-300 ${
                 activeFilter === category.id
                   ? "bg-[#00ff00] text-black"
-                  : "border border-white hover:border-[#00ff00] hover:text-[#00ff00]"
+                  : "border dark:border-white hover:border-[#00ff00] hover:text-[#00ff00]"
               }`}
             >
               {category.name} ({category.count})
@@ -343,32 +345,32 @@ export default function Projects() {
 
         {/* Stats Section */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-          <div className="text-center p-6 border border-white rounded-lg hover:border-[#00ff00] transition duration-300">
+          <div className="text-center p-6 border dark:border-white rounded-lg hover:border-[#00ff00] transition duration-300">
             <h4 className="text-2xl font-bold text-[#00ff00] mb-2">
               {projects.length}
             </h4>
             <p className="text-sm text-gray-400">Total Projects</p>
           </div>
-          <div className="text-center p-6 border border-white rounded-lg hover:border-[#00ff00] transition duration-300">
+          <div className="text-center p-6 border dark:border-white rounded-lg hover:border-[#00ff00] transition duration-300">
             <h4 className="text-2xl font-bold text-[#00ff00] mb-2">
               {projects.filter((p) => p.status === "completed").length}
             </h4>
             <p className="text-sm text-gray-400">Completed</p>
           </div>
-          <div className="text-center p-6 border border-white rounded-lg hover:border-[#00ff00] transition duration-300">
+          <div className="text-center p-6 border dark:border-white rounded-lg hover:border-[#00ff00] transition duration-300">
             <h4 className="text-2xl font-bold text-[#00ff00] mb-2">
               {projects.filter((p) => p.category.includes("ai")).length}
             </h4>
             <p className="text-sm text-gray-400">AI Projects</p>
           </div>
-          <div className="text-center p-6 border border-white rounded-lg hover:border-[#00ff00] transition duration-300">
+          <div className="text-center p-6 border dark:border-white rounded-lg hover:border-[#00ff00] transition duration-300">
             <h4 className="text-2xl font-bold text-[#00ff00] mb-2">15+</h4>
             <p className="text-sm text-gray-400">Technologies Used</p>
           </div>
         </div>
 
         {/* Call to Action */}
-        <div className="text-center p-8 border border-white rounded-lg">
+        <div className="text-center p-8 border dark:border-white rounded-lg">
           <h3 className="text-lg font-semibold mb-4">
             Interested in Working Together?
           </h3>

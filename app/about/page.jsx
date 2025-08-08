@@ -1,16 +1,12 @@
 import Link from "next/link";
 import { ArrowLeft, Code, Zap, Users, Target } from "lucide-react";
-import {
-  FaXTwitter,
-  FaLinkedin,
-  FaSquareInstagram,
-  FaSquareGithub,
-} from "react-icons/fa6";
 import Footer from "../components/Footer";
+import Header from "../components/Header";
 
 export default function About() {
   return (
     <main className="min-h-screen p-4 lg:p-10 flex flex-col items-center font-poppins">
+      <Header />
       <div className="w-full max-w-6xl">
         <div className="flex items-center gap-6 justify-between mb-8">
           <Link
@@ -62,7 +58,7 @@ export default function About() {
           <div className="w-full lg:w-2/5 p-2 lg:p-6">
             <div className="flex flex-col gap-6 items-center justify-center">
               <div className="grid grid-cols-1 gap-6 w-full">
-                <div className="p-6 border border-white rounded-lg hover:border-[#00ff00] transition duration-300">
+                <div className="p-6 border border-[#000] dark:border-white rounded-lg hover:border-[#00ff00] transition duration-300">
                   <div className="flex items-center space-x-4">
                     <Code size={30} className="text-[#00ff00]" />
                     <div>
@@ -72,7 +68,7 @@ export default function About() {
                   </div>
                 </div>
                 
-                <div className="p-6 border border-white rounded-lg hover:border-[#00ff00] transition duration-300">
+                <div className="p-6 border border-[#000] dark:border-white rounded-lg hover:border-[#00ff00] transition duration-300">
                   <div className="flex items-center space-x-4">
                     <Zap size={30} className="text-[#00ff00]" />
                     <div>
@@ -82,7 +78,7 @@ export default function About() {
                   </div>
                 </div>
                 
-                <div className="p-6 border border-white rounded-lg hover:border-[#00ff00] transition duration-300">
+                <div className="p-6 border border-[#000] dark:border-white rounded-lg hover:border-[#00ff00] transition duration-300">
                   <div className="flex items-center space-x-4">
                     <Users size={30} className="text-[#00ff00]" />
                     <div>
@@ -92,7 +88,7 @@ export default function About() {
                   </div>
                 </div>
                 
-                <div className="p-6 border border-white rounded-lg hover:border-[#00ff00] transition duration-300">
+                <div className="p-6 border border-[#000] dark:border-white rounded-lg hover:border-[#00ff00] transition duration-300">
                   <div className="flex items-center space-x-4">
                     <Target size={30} className="text-[#00ff00]" />
                     <div>

@@ -26,6 +26,7 @@ import {
   SiTailwindcss,
   SiTypescript,
 } from "react-icons/si";
+import Header from "../components/Header";
 
 export default function Skills() {
   const skillCategories = [
@@ -181,6 +182,7 @@ export default function Skills() {
 
   return (
     <main className="min-h-screen p-4 lg:p-10 flex flex-col items-center font-poppins">
+      <Header />
       <div className="w-full max-w-6xl">
         <div className="flex items-center justify-between mb-8">
           <Link
@@ -213,7 +215,7 @@ export default function Skills() {
           {skillCategories.map((category, index) => (
             <div
               key={index}
-              className="p-6 border border-white rounded-lg hover:border-[#00ff00] transition duration-300"
+              className="p-6 border dark:border-white rounded-lg hover:border-[#00ff00] transition duration-300"
             >
               <div className="flex items-center space-x-3 mb-6">
                 {category.icon}
@@ -230,22 +232,22 @@ export default function Skills() {
 
         {/* Additional Info Section */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-          <div className="text-center p-6 border border-white rounded-lg hover:border-[#00ff00] transition duration-300">
+          <div className="text-center p-6 border dark:border-white rounded-lg hover:border-[#00ff00] transition duration-300">
             <h4 className="text-lg font-semibold text-[#00ff00] mb-2">3+</h4>
             <p className="text-sm text-gray-400">Years of Experience</p>
           </div>
-          <div className="text-center p-6 border border-white rounded-lg hover:border-[#00ff00] transition duration-300">
+          <div className="text-center p-6 border dark:border-white rounded-lg hover:border-[#00ff00] transition duration-300">
             <h4 className="text-lg font-semibold text-[#00ff00] mb-2">20+</h4>
             <p className="text-sm text-gray-400">Projects Completed</p>
           </div>
-          <div className="text-center p-6 border border-white rounded-lg hover:border-[#00ff00] transition duration-300">
+          <div className="text-center p-6 border dark:border-white rounded-lg hover:border-[#00ff00] transition duration-300">
             <h4 className="text-lg font-semibold text-[#00ff00] mb-2">10+</h4>
             <p className="text-sm text-gray-400">Technologies Mastered</p>
           </div>
         </div>
 
         {/* Learning Section */}
-        <div className="text-center p-6 border border-white rounded-lg">
+        <div className="text-center p-6 border dark:border-white rounded-lg">
           <h3 className="text-lg font-semibold mb-4">Currently Learning</h3>
           <div className="flex flex-wrap justify-center gap-4">
             <span className="px-4 py-2 bg-[#00ff00]/10 border border-[#00ff00] rounded-full text-sm">
