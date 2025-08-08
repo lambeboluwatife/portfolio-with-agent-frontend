@@ -1,8 +1,25 @@
+"use client";
 import Link from "next/link";
-import { FolderCode, CircleUser, Lightbulb, Mail } from "lucide-react";
+import { FolderCode, CircleUser, Lightbulb, Mail, X, Send } from "lucide-react";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import { CopilotSidebar } from "@copilotkit/react-ui";
+
+// const CustomUserMessage = ({ message }) => {
+//   const wrapperStyles = "flex items-center gap-2 justify-end mb-4";
+//   const messageStyles =
+//     "bg-blue-500 text-white py-2 px-4 rounded-xl break-words flex-shrink-0 max-w-[80%]";
+//   const avatarStyles =
+//     "bg-blue-500 shadow-sm min-h-10 min-w-10 rounded-full text-white flex items-center justify-center";
+
+//   return (
+//     <div className={wrapperStyles}>
+//       <div className={messageStyles}>{message}</div>
+//       <div className={avatarStyles}>TS</div>
+//     </div>
+//   );
+// };
+
 export default function LBDCodes() {
   return (
     <main className="h-dvh p-4 lg:p-10 flex flex-col items-center font-poppins">
@@ -73,7 +90,21 @@ export default function LBDCodes() {
 
       {/* Footer */}
       <Footer />
-      <CopilotSidebar />
+      <CopilotSidebar
+        labels={{
+          initial:
+            "👋 Hey there! I’m L.B.D’s personal sidekick. What’s on your mind?",
+          title: "🤖 L.B.D Agent",
+          placeholder:
+            "Type away… ask me about Lambe Boluwatife, this portfolio, or even my favorite snacks! 🍪",
+          stopGenerating: "✋ Chill, stop!",
+          regenerateResponse: "🔄 Give it another go!",
+        }}
+        icons={{
+          sendIcon: <Send size={16} className="text-[#00ff00]" />,
+          closeIcon: <X size={16} className="text-[#00ff00]" />,
+        }}
+      />
     </main>
   );
 }
