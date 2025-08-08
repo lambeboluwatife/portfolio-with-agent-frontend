@@ -7,16 +7,23 @@ import {
 import { MastraAgent } from "@ag-ui/mastra";
 import { MastraClient } from "@mastra/client-js";
 
-const MASTRA_URL = process.env.MASTRA_URL || "http://localhost:4111";
+// 1. Base address for the Mastra server
+const MASTRA_URL =
+  process.env.MASTRA_URL || "https://thousands-little-parrot.mastra.cloud/";
 
+// 2. You can use any service adapter here for multi-agent support. We use
+//    the empty adapter since we're only using one agent.
 const serviceAdapter = new ExperimentalEmptyAdapter();
 
+// 3. Create the CopilotRuntime instance and utilize the Mastra AG-UI
+//    integration to get the remote agents.
 const runtime = new CopilotRuntime({
   agents: await MastraAgent.getRemoteAgents({
     mastraClient: new MastraClient({ baseUrl: MASTRA_URL }),
   }),
 });
 
+// 4. Build a Next.js API route that handles the CopilotKit runtime requests.
 export const POST = async (req) => {
   const { handleRequest } = copilotRuntimeNextJSAppRouterEndpoint({
     runtime,
