@@ -1,4 +1,7 @@
 import "./globals.css";
+import { CopilotKit } from "@copilotkit/react-core";
+import "@copilotkit/react-ui/styles.css";
+
 import { Providers } from "./providers";
 
 export const metadata = {
@@ -39,9 +42,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
-        <Providers>{children}</Providers>
+        <CopilotKit runtimeUrl="/api/copilotkit" agent="portfolioAgent">
+          <Providers>{children}</Providers>
+        </CopilotKit>
       </body>
     </html>
-  )
+  );
 }
-

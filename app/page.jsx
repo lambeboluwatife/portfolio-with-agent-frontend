@@ -2,7 +2,7 @@ import Link from "next/link";
 import { FolderCode, CircleUser, Lightbulb, Mail } from "lucide-react";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-
+import { CopilotSidebar } from "@copilotkit/react-ui";
 export default function LBDCodes() {
   return (
     <main className="h-dvh p-4 lg:p-10 flex flex-col items-center font-poppins">
@@ -73,6 +73,7 @@ export default function LBDCodes() {
 
       {/* Footer */}
       <Footer />
+      <CopilotSidebar />
     </main>
   );
 }
