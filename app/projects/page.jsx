@@ -129,7 +129,7 @@ export default function Projects() {
         "Tailwind CSS",
       ],
       category: ["open-source", "fullstack"],
-      liveUrl: null,
+      liveUrl: "https://lbdflix-movies.vercel.app/",
       githubUrl: "https://github.com/lambeboluwatife/lbdflix",
       date: "2023",
       status: "in-progress",
