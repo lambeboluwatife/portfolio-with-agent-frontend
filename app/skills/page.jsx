@@ -25,6 +25,7 @@ import {
   SiExpress,
   SiTailwindcss,
   SiTypescript,
+  SiSvelte,
 } from "react-icons/si";
 import Header from "../components/Header";
 
@@ -52,6 +53,11 @@ export default function Skills() {
         {
           name: "TypeScript",
           icon: <SiTypescript className="text-blue-500" />,
+          level: 50,
+        },
+        {
+          name: "Svelte",
+          icon: <SiSvelte className="text-red-500" />,
           level: 50,
         },
         {

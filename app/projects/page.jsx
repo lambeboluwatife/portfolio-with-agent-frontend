@@ -9,6 +9,7 @@ import {
   SiExpress,
   SiTailwindcss,
   SiTypescript,
+  SiSvelte,
   SiOpenai,
 } from "react-icons/si";
 import { useState } from "react";
@@ -69,11 +70,10 @@ export default function Projects() {
       title: "GKAI - Getting Killed And Injured",
       description:
         "A logical and thinking game where players must try to get randomly generated numbers in the exact order. Features multiplayer mode and real-time score tracking.",
-      image: "/images/gkai.webp",
+      image: "/images/gkai-svelte.webp",
       technologies: [
-        "React",
+        "Svelte",
         "Node.js",
-        "Next.js",
         "Socket.io",
         "Tailwind CSS",
         "TypeScript",
@@ -81,14 +81,11 @@ export default function Projects() {
         "RESTful APIs",
         "Git & GitHub",
         "MongoDB",
-        "Mastra",
-        "CoPilotKit",
-        "Arcade",
       ],
       category: ["fullstack"],
-      liveUrl: "https://lambeboluwatife.github.io/GKAI/",
-      githubUrl: "https://github.com/lambeboluwatife/GKAI/",
-      date: "2023",
+      liveUrl: "https://gkai-svelte-kit.vercel.app/",
+      githubUrl: "https://github.com/lambeboluwatife/GKAI-SvelteKit",
+      date: "2025",
       status: "in-progress",
     },
     {
@@ -157,6 +154,24 @@ export default function Projects() {
       date: "2025",
       status: "in-progress",
     },
+    {
+      id: 7,
+      title: "Task Manager",
+      description: "This is a Task Management Application built using SvelteKit and Tailwind CSS. It features a Kanban-style board interface that allows users to organize tasks by their status (Pending, In Progress, Completed).",
+      image: "/images/task-manager.webp",
+      technologies: [
+        "Svelte",
+        "TypeScript",
+        "JavaScript",
+        "CSS",
+        "Tailwind CSS",
+      ],
+      category: ["frontend"],
+      liveUrl: "https://ai-box-projects.vercel.app/",
+      githubUrl: "https://github.com/lambeboluwatife/ai-box-projects/tree/main/svelte-task-manager",
+      date: "2025",
+      status: "completed",
+    }
   ];
 
   const categories = [
@@ -196,6 +211,7 @@ export default function Projects() {
       "Node.js": <FaNodeJs className="text-green-500" />,
       JavaScript: <FaJs className="text-yellow-400" />,
       TypeScript: <SiTypescript className="text-blue-500" />,
+      Svelte: <SiSvelte className="text-red-500" />,
       MongoDB: <SiMongodb className="text-green-500" />,
       Express: <SiExpress className="text-gray-400" />,
       Python: <FaPython className="text-yellow-400" />,
