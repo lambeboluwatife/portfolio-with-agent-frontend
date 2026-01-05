@@ -113,7 +113,7 @@ export default function Projects() {
       title: "LBDflix - Movie Database",
       description:
         "A movie database application that allows users to search for movies, view details, and create watchlists. Features responsive design and integration with a movie API.",
-      image: "/images/lbdflix.png",
+      image: "/images/lbdflix.webp",
       technologies: [
         "React",
         "Next.js",
