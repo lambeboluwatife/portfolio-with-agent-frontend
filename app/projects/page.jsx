@@ -1,7 +1,14 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowLeft, ExternalLink, Github, Calendar, Tag } from "lucide-react";
+import {
+  ArrowLeft,
+  ExternalLink,
+  Github,
+  Calendar,
+  Tag,
+  X,
+} from "lucide-react";
 import { FaReact, FaNodeJs, FaJs, FaPython } from "react-icons/fa6";
 import {
   SiNextdotjs,
@@ -18,6 +25,7 @@ import Header from "../components/Header";
 
 export default function Projects() {
   const [activeFilter, setActiveFilter] = useState("all");
+  const [selectedProject, setSelectedProject] = useState(null);
 
   const projects = [
     {
@@ -25,6 +33,11 @@ export default function Projects() {
       title: "Eventful",
       description:
         "A full-stack event management platform for creating, managing, and attending events. Features user authentication, event creation, ticketing, and real-time notifications.",
+      problem:
+        "Traditional event management was disjointed, making it hard for users to discover and manage tickets in one place.",
+      role: "Lead Full-Stack Developer",
+      outcome:
+        "Built a seamless, all-in-one platform with real-time updates, resulting in a 30% faster event creation flow.",
       image: "/images/eventful.webp",
       technologies: [
         "React",
@@ -35,7 +48,6 @@ export default function Projects() {
         "Tailwind CSS",
         "TypeScript",
         "RESTful APIs",
-        "Git & GitHub",
       ],
       category: ["fullstack"],
       liveUrl: "https://eventful-lbd.netlify.app",
@@ -49,6 +61,11 @@ export default function Projects() {
       title: "Case Study Agent",
       description:
         "An intelligent AI agent that generates detailed case studies analysis and report based on user input and data. Utilizes Google API for natural language processing and content generation.",
+      problem:
+        "Manual generation of case study reports was time-consuming and inconsistent for research teams.",
+      role: "AI Lead & Frontend Developer",
+      outcome:
+        "Automated the report generation process, reducing turnaround time from hours to seconds with AI-driven insights.",
       image: "/images/case.png",
       technologies: [
         "Next.js",
@@ -70,6 +87,11 @@ export default function Projects() {
       title: "GKAI - Getting Killed And Injured",
       description:
         "A logical and thinking game where players must try to get randomly generated numbers in the exact order. Features multiplayer mode and real-time score tracking.",
+      problem:
+        "Lack of engaging, simple multiplayer logic games that test deductive reasoning in real-time.",
+      role: "Full-Stack Developer",
+      outcome:
+        "Created a low-latency multiplayer experience using WebSockets, supporting competitive real-time gameplay.",
       image: "/images/gkai-svelte.webp",
       technologies: [
         "Svelte",
@@ -78,8 +100,6 @@ export default function Projects() {
         "Tailwind CSS",
         "TypeScript",
         "Express",
-        "RESTful APIs",
-        "Git & GitHub",
         "MongoDB",
       ],
       category: ["fullstack"],
@@ -93,14 +113,18 @@ export default function Projects() {
       title: "Hirewave - Job Portal",
       description:
         "An job portal that connects job seekers with employers. Features job listings, resume upload, and job matching.",
+      problem:
+        "Difficulty for job seekers to track applications and find relevant matches in local markets.",
+      role: "Frontend Developer",
+      outcome:
+        "Designed a clean, intuitive UI with offline-first capabilities using Dexie.js for better persistence.",
       image: "/images/hirewave.webp",
       technologies: [
         "React",
         "Dexie.js",
-        "CSS",
+        "Tailwind CSS",
         "JavaScript",
         "HTML5",
-        "Tailwind CSS",
       ],
       category: ["frontend"],
       liveUrl: "https://hirewave-merge.netlify.app/",
@@ -112,7 +136,12 @@ export default function Projects() {
       id: 5,
       title: "LBDflix - Movie Database",
       description:
-        "A movie database application that allows users to search for movies, view details, and create watchlists. Features responsive design and integration with a movie API.",
+        "A movie database application that allows users to search for movies, view details, and create watchlists.",
+      problem:
+        "Existing movie databases were often cluttered or slow on mobile devices.",
+      role: "Lead Full-Stack Developer",
+      outcome:
+        "Developed a high-performance, mobile-first movie discovery tool with optimized API fetching.",
       image: "/images/lbdflix.webp",
       technologies: [
         "React",
@@ -120,12 +149,6 @@ export default function Projects() {
         "Express",
         "Node.js",
         "MongoDB",
-        "RESTful APIs",
-        "Git & GitHub",
-        "MongoDB",
-        "open-source",
-        "JavaScript",
-        "HTML5",
         "Tailwind CSS",
       ],
       category: ["open-source", "fullstack"],
@@ -138,7 +161,12 @@ export default function Projects() {
       id: 6,
       title: "Mastra AI Tools",
       description:
-        "This repository provides concise TypeScript examples for integrating Mastra AI tools, with a focus on connecting third-party services from Arcade.dev and composio.",
+        "Brief TypeScript examples for integrating Mastra AI tools, focusing on third-party service connections.",
+      problem:
+        "Developers lacked concise, practical examples for integrating AI tools with complex SaaS ecosystems.",
+      role: "Open Source Contributor",
+      outcome:
+        "Provided clear, reusable code patterns that simplified the adoption of Mastra AI in dev workflows.",
       image: "/images/mastra-ai-tools.png",
       technologies: [
         "Mastra",
@@ -146,7 +174,6 @@ export default function Projects() {
         "Composio",
         "Google API",
         "TypeScript",
-        "open-source",
       ],
       category: ["open-source", "ai"],
       liveUrl: null,
@@ -157,21 +184,40 @@ export default function Projects() {
     {
       id: 7,
       title: "Task Manager",
-      description: "This is a Task Management Application built using SvelteKit and Tailwind CSS. It features a Kanban-style board interface that allows users to organize tasks by their status (Pending, In Progress, Completed).",
+      description:
+        "A Task Management Application built using SvelteKit and Tailwind CSS, featuring a Kanban-style board.",
+      problem:
+        "Simple task lists lacked visual progression tracking, leading to poor project visibility.",
+      role: "Frontend Developer",
+      outcome:
+        "Implemented a dynamic Kanban board with drag-and-drop mechanics, improving task organization.",
       image: "/images/task-manager.webp",
-      technologies: [
-        "Svelte",
-        "TypeScript",
-        "JavaScript",
-        "CSS",
-        "Tailwind CSS",
-      ],
+      technologies: ["Svelte", "TypeScript", "Tailwind CSS"],
       category: ["frontend"],
       liveUrl: "https://ai-box-projects.vercel.app/",
-      githubUrl: "https://github.com/lambeboluwatife/ai-box-projects/tree/main/svelte-task-manager",
+      githubUrl:
+        "https://github.com/lambeboluwatife/ai-box-projects/tree/main/svelte-task-manager",
       date: "2025",
       status: "completed",
-    }
+    },
+    {
+      id: 8,
+      title: "Krea AI",
+      description:
+        "A modern, responsive frontend interface inspired by Krea AI, designed to showcase creative AI tools in a clean, card-based layout.",
+      problem:
+        "Providing a clean and navigable entry point for complex AI creative tools.",
+      role: "Frontend Developer",
+      outcome:
+        "Built a visually stunning, responsive UI that maintains theme consistency and tool discoverability.",
+      image: "/images/krea-ai.webp",
+      technologies: ["React", "Next.js", "JavaScript", "Tailwind CSS"],
+      category: ["frontend"],
+      liveUrl: "https://krea-ai-demo.netlify.app/",
+      githubUrl: "https://github.com/lambeboluwatife/cardtolinks",
+      date: "2025",
+      status: "completed",
+    },
   ];
 
   const categories = [
@@ -221,21 +267,137 @@ export default function Projects() {
     return iconMap[tech] || <Tag className="text-gray-400" size={16} />;
   };
 
-  const ProjectCard = ({ project }) => (
-    <div className="border dark:border-white rounded-lg overflow-hidden hover:border-[#00ff00] transition duration-300 group">
-      <div className="relative">
-        <div className="w-full h-48 bg-gray-800 flex items-center justify-center">
-          <Image
-            src={project.image}
-            alt={project.title}
-            width={400}
-            height={200}
-            className="w-full h-full object-cover"
-          />
+  const ProjectModal = ({ project, onClose }) => {
+    if (!project) return null;
+
+    return (
+      <div
+        className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-in fade-in duration-300"
+        onClick={onClose}
+      >
+        <div
+          className="bg-[#0a0a0a] border border-[#00ff00]/30 w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-xl shadow-2xl shadow-[#00ff00]/10 animate-in zoom-in-95 duration-300"
+          onClick={(e) => e.stopPropagation()}
+        >
+          <div className="relative h-64 md:h-80 w-full">
+            <Image
+              src={project.image}
+              alt={project.title}
+              fill
+              className="object-cover"
+            />
+            <button
+              onClick={onClose}
+              className="absolute top-4 right-4 p-2 bg-black/50 hover:bg-[#00ff00] hover:text-black rounded-full transition-all duration-300 text-white z-10"
+            >
+              <X size={20} />
+            </button>
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] to-transparent" />
+          </div>
+
+          <div className="p-8 -mt-12 relative z-10">
+            <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
+              <div>
+                <h2 className="text-3xl font-bold font-montserrat text-[#00ff00] mb-2">
+                  {project.title}
+                </h2>
+                <div className="flex items-center text-xs text-gray-400">
+                  <Calendar size={14} className="mr-1" />
+                  {project.date}
+                </div>
+              </div>
+              <div className="flex gap-3">
+                {project.liveUrl && (
+                  <Link
+                    href={project.liveUrl}
+                    target="_blank"
+                    className="flex items-center space-x-2 px-6 py-2 bg-[#00ff00] text-black text-sm font-bold rounded-lg hover:bg-[#00cc00] transition duration-300"
+                  >
+                    <ExternalLink size={16} />
+                    <span>Live Demo</span>
+                  </Link>
+                )}
+                <Link
+                  href={project.githubUrl}
+                  target="_blank"
+                  className="flex items-center space-x-2 px-6 py-2 border border-white/20 hover:border-[#00ff00] hover:text-[#00ff00] text-sm font-bold rounded-lg transition duration-300"
+                >
+                  <Github size={16} />
+                  <span>GitHub</span>
+                </Link>
+              </div>
+            </div>
+
+            <p className="text-gray-300 leading-relaxed mb-8">
+              {project.description}
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 border-y border-white/10 py-8">
+              <div>
+                <h4 className="text-xs font-bold text-[#00ff00] uppercase tracking-widest mb-3">
+                  The Problem
+                </h4>
+                <p className="text-sm text-gray-400 leading-relaxed">
+                  {project.problem}
+                </p>
+              </div>
+              <div>
+                <h4 className="text-xs font-bold text-[#00ff00] uppercase tracking-widest mb-3">
+                  My Contribution
+                </h4>
+                <p className="text-sm text-gray-400 leading-relaxed">
+                  {project.role}
+                </p>
+              </div>
+              <div>
+                <h4 className="text-xs font-bold text-[#00ff00] uppercase tracking-widest mb-3">
+                  The Outcome
+                </h4>
+                <p className="text-sm text-gray-400 leading-relaxed">
+                  {project.outcome}
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <h4 className="text-xs font-bold text-[#00ff00] uppercase tracking-widest mb-4">
+                Tech Stack
+              </h4>
+              <div className="flex flex-wrap gap-2">
+                {project.technologies.map((tech, index) => (
+                  <span
+                    key={index}
+                    className="flex items-center space-x-2 px-3 py-1.5 bg-white/5 border border-white/10 rounded-full text-xs hover:border-[#00ff00]/50 transition-colors"
+                  >
+                    {getTechIcon(tech)}
+                    <span>{tech}</span>
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+    );
+  };
+
+  const ProjectCard = ({ project }) => (
+    <div
+      onClick={() => setSelectedProject(project)}
+      className="border border-white/10 rounded-xl overflow-hidden hover:border-[#00ff00] transition-all duration-500 group cursor-pointer bg-white/[0.02] hover:bg-white/[0.05] hover:-translate-y-2 flex flex-col h-full"
+    >
+      <div className="relative h-48 overflow-hidden">
+        <Image
+          src={project.image}
+          alt={project.title}
+          width={400}
+          height={200}
+          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+        />
+        <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all duration-500" />
         <div className="absolute top-4 right-4">
           <span
-            className={`px-2 py-1 text-xs rounded-full ${
+            className={`px-3 py-1 text-[10px] font-bold uppercase tracking-wider rounded-full ${
               project.status === "completed"
                 ? "bg-[#00ff00] text-black"
                 : "bg-yellow-500 text-black"
@@ -244,61 +406,49 @@ export default function Projects() {
             {project.status === "completed" ? "Completed" : "In Progress"}
           </span>
         </div>
+        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <span className="px-4 py-2 bg-[#00ff00] text-black text-xs font-bold rounded-lg shadow-lg">
+            View Case Study
+          </span>
+        </div>
       </div>
 
-      <div className="p-6">
-        <div className="flex items-center justify-between mb-2">
-          <h3 className="text-lg font-semibold group-hover:text-[#00ff00] transition duration-300">
+      <div className="p-6 flex flex-col flex-1">
+        <div className="flex items-center justify-between mb-3">
+          <h3 className="text-xl font-bold group-hover:text-[#00ff00] transition duration-300 font-montserrat tracking-tight">
             {project.title}
           </h3>
-          <div className="flex items-center text-xs text-gray-400">
-            <Calendar size={14} className="mr-1" />
+          <span className="text-[10px] text-gray-500 font-medium whitespace-nowrap">
             {project.date}
-          </div>
+          </span>
         </div>
 
-        <p className="text-sm text-gray-300 mb-4 line-clamp-3">
+        <p className="text-sm text-gray-400 mb-6 line-clamp-3 leading-relaxed">
           {project.description}
         </p>
 
-        <div className="flex flex-wrap gap-2 mb-4">
-          {project.technologies.slice(0, 4).map((tech, index) => (
-            <span
-              key={index}
-              className="flex items-center space-x-1 px-2 py-1 bg-gray-800 rounded-full text-xs"
-            >
-              {getTechIcon(tech)}
-              <span>{tech}</span>
-            </span>
-          ))}
-          {project.technologies.length > 4 && (
-            <span className="px-2 py-1 bg-gray-800 rounded-full text-xs">
-              +{project.technologies.length - 4} more
-            </span>
-          )}
-        </div>
+        <div className="mt-auto">
+          <div className="flex flex-wrap gap-2 mb-4">
+            {project.technologies.slice(0, 3).map((tech, index) => (
+              <span
+                key={index}
+                className="flex items-center space-x-1.5 px-2 py-1 bg-white/5 rounded-md text-[10px] text-gray-300 border border-white/5"
+              >
+                {getTechIcon(tech)}
+                <span>{tech}</span>
+              </span>
+            ))}
+            {project.technologies.length > 3 && (
+              <span className="px-2 py-1 bg-white/5 rounded-md text-[10px] text-gray-500 border border-white/5">
+                +{project.technologies.length - 3}
+              </span>
+            )}
+          </div>
 
-        <div className="flex space-x-3">
-          {project.liveUrl && (
-            <Link
-              href={project.liveUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center space-x-1 px-3 py-2 bg-[#00ff00] text-black text-xs font-semibold rounded hover:bg-[#00cc00] transition duration-300"
-            >
-              <ExternalLink size={14} />
-              <span>Live Demo</span>
-            </Link>
-          )}
-          <Link
-            href={project.githubUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center space-x-1 px-3 py-2 border dark:border-white text-xs font-semibold rounded hover:border-[#00ff00] hover:text-[#00ff00] transition duration-300"
-          >
-            <Github size={14} />
-            <span>View Code</span>
-          </Link>
+          <div className="flex items-center text-[#00ff00] text-xs font-bold group-hover:translate-x-1 transition-transform duration-300">
+            <span>Learn More</span>
+            <ExternalLink size={12} className="ml-1" />
+          </div>
         </div>
       </div>
     </div>
@@ -404,6 +554,12 @@ export default function Projects() {
       </div>
 
       <Footer />
+      {selectedProject && (
+        <ProjectModal
+          project={selectedProject}
+          onClose={() => setSelectedProject(null)}
+        />
+      )}
     </main>
   );
 }

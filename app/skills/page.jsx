@@ -53,12 +53,18 @@ export default function Skills() {
         {
           name: "TypeScript",
           icon: <SiTypescript className="text-blue-500" />,
-          level: 50,
+          level: 55,
         },
+      ],
+    },
+    {
+      title: "Styling & UI",
+      icon: <Palette size={30} className="text-[#00ff00]" />,
+      skills: [
         {
-          name: "Svelte",
-          icon: <SiSvelte className="text-red-500" />,
-          level: 50,
+          name: "Tailwind CSS",
+          icon: <SiTailwindcss className="text-cyan-400" />,
+          level: 85,
         },
         {
           name: "HTML5",
@@ -71,14 +77,14 @@ export default function Skills() {
           level: 80,
         },
         {
-          name: "Tailwind CSS",
-          icon: <SiTailwindcss className="text-cyan-400" />,
-          level: 75,
+          name: "Responsive Design",
+          icon: <Code2 className="text-[#00ff00]" />,
+          level: 90,
         },
       ],
     },
     {
-      title: "Backend Development",
+      title: "API & Backend",
       icon: <Server size={30} className="text-[#00ff00]" />,
       skills: [
         {
@@ -92,30 +98,14 @@ export default function Skills() {
           level: 60,
         },
         {
-          name: "Python",
-          icon: <FaPython className="text-yellow-400" />,
-          level: 35,
-        },
-        {
           name: "RESTful APIs",
           icon: <Code2 className="text-[#00ff00]" />,
           level: 80,
         },
-      ],
-    },
-    {
-      title: "Database & Storage",
-      icon: <Database size={30} className="text-[#00ff00]" />,
-      skills: [
         {
           name: "MongoDB",
           icon: <SiMongodb className="text-green-500" />,
           level: 75,
-        },
-        {
-          name: "Firebase",
-          icon: <Database className="text-orange-400" />,
-          level: 60,
         },
       ],
     },
@@ -138,15 +128,10 @@ export default function Skills() {
           icon: <Bot className="text-blue-400" />,
           level: 80,
         },
-        {
-          name: "Process Automation",
-          icon: <Bot className="text-yellow-400" />,
-          level: 75,
-        },
       ],
     },
     {
-      title: "Tools & DevOps",
+      title: "Tools & Workflow",
       icon: <Palette size={30} className="text-[#00ff00]" />,
       skills: [
         {

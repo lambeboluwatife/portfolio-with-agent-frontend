@@ -63,11 +63,19 @@ const PortfolioContent = () => {
   // Portfolio data for AI context
   const portfolioData = {
     name: "Lambe Boluwatife",
-    role: "Full-Stack Developer",
-    skills: ["MERN Stack", "AI Agents", "Mastra", "OpenAI", "React", "Node.js"],
-    specialization: "responsive web applications and AI-powered agents",
-    tools: ["Mastra framework", "OpenAI tools"],
-    philosophy: "clean code, smart automation, and intuitive design",
+    role: "Frontend Developer",
+    skills: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "JavaScript",
+      "MERN Stack",
+    ],
+    specialization:
+      "high-performance, responsive UI design and AI tool integration",
+    tools: ["Mastra framework", "OpenAI tools", "CopilotKit"],
+    philosophy: "clean code, accessibility, and intuitive user experiences",
   };
 
   // Make portfolio data available to AI
@@ -88,18 +96,19 @@ const PortfolioContent = () => {
               <h1 className="my-2 text-base text-[#00ff00]">Hello &#128075;</h1>
               <h1 className="my-2 text-xl md:text-3xl">I'm Lambe Boluwatife</h1>
               <h6 className="my-2 text-sm text-justify">
-                I am a Full-Stack Developer passionate about building responsive
-                web applications and AI-powered agents. I specialize in the MERN
-                stack and have hands-on experience creating intelligent agents
-                using frameworks like Mastra and OpenAI tools. I enjoy solving
-                real-world problems through clean code, smart automation, and
-                intuitive design.
+                I am a Frontend Developer specializing in React, Next.js, and
+                responsive UI design. I build clean, accessible, and
+                high-performance web applications with a focus on seamless API
+                integration and intuitive user experiences. I also have hands-on
+                experience developing intelligent AI agents using frameworks
+                like Mastra and OpenAI tools, bridging the gap between advanced
+                technology and modern frontend interfaces.
               </h6>
               <Link
-                href="/resume.pdf"
+                href="/Lambe_Boluwatife_Frontend_Developer.pdf"
                 rel="noreferrer"
                 target="_blank"
-                download="resume.pdf"
+                download="Lambe_Boluwatife_Frontend_Developer.pdf"
                 className="mt-4 inline-block text-xs px-6 py-4 font-semibold bg-[#00ff00] text-black hover:bg-[#00cc00] transition duration-300"
               >
                 Download Resume
