@@ -218,6 +218,29 @@ export default function Projects() {
       date: "2025",
       status: "completed",
     },
+    {
+      id: 9,
+      title: "Deduction",
+      description:
+        "Deduction provides comprehensive intelligence reports, player database, and market analysis for Nigerian football. Discover in-depth insights on players, clubs, and emerging trends.",
+      problem:
+        "Lack of centralized, data-driven insights for Nigerian football enthusiasts and professionals.",
+      role: "Lead Full-Stack Developer",
+      outcome:
+        "Created a robust platform with real-time data updates, empowering users with actionable football intelligence.",
+      image: "/images/Deduction.webp",
+      technologies: [
+        "React",
+        "Next.js",
+        "JavaScript",
+        "Tailwind CSS",
+        "Sanity CMS",
+      ],
+      category: ["frontend"],
+      liveUrl: "https://www.deduction.com.ng/",
+      date: "2026",
+      status: "completed",
+    },
   ];
 
   const categories = [

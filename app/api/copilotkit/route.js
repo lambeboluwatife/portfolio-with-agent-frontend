@@ -3,12 +3,12 @@ import {
   ExperimentalEmptyAdapter,
   copilotRuntimeNextJSAppRouterEndpoint,
 } from "@copilotkit/runtime";
-
 import { MastraAgent } from "@ag-ui/mastra";
 import { MastraClient } from "@mastra/client-js";
 
 const MASTRA_URL =
-  process.env.MASTRA_URL || "https://thousands-little-parrot.mastra.cloud/";
+  process.env.MASTRA_URL || "https://green-hundreds-helicopter.mastra.cloud/";
+
 const serviceAdapter = new ExperimentalEmptyAdapter();
 
 const runtime = new CopilotRuntime({

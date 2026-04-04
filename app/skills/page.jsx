@@ -149,6 +149,11 @@ export default function Skills() {
           icon: <Code2 className="text-blue-500" />,
           level: 95,
         },
+        {
+          name: "Sanity Headless CMS",
+          icon: <Globe className="text-[#00ff00]" />,
+          level: 40,
+        },
       ],
     },
   ];

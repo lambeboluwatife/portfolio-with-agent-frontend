@@ -34,7 +34,7 @@ const Footer = () => {
       </div>
       <div className="text-center space-y-1">
         <p className="text-[10px] text-gray-500 uppercase tracking-widest">
-          Last Updated: Jan 2026
+          Last Updated: March 2026
         </p>
         <p className="text-[10px] text-gray-400 font-medium">
           &copy; {new Date().getFullYear()} Lambe Boluwatife. Built with Next.js

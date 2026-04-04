@@ -1,6 +1,6 @@
 import "./globals.css";
 import { CopilotKit } from "@copilotkit/react-core";
-import "@copilotkit/react-ui/styles.css";
+import "@copilotkit/react-ui/v2/styles.css";
 
 import { Providers } from "./providers";
 
@@ -36,7 +36,7 @@ export const metadata = {
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
     other: [{ rel: "manifest", url: "manifest.json" }],
   },
-   verification: {
+  verification: {
     google: "OJdfMGYpYm3QJAobMwo_YvWfQtkwDxsZa7tn94gMVNY",
   },
 };
@@ -45,7 +45,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
-        <CopilotKit runtimeUrl="/api/copilotkit" agent="portfolioAgent">
+        <CopilotKit runtimeUrl="/api/copilotkit" agent="portfolio-agent">
           <Providers>{children}</Providers>
         </CopilotKit>
       </body>
