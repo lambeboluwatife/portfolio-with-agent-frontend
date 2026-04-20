@@ -159,7 +159,7 @@ const PortfolioContent = () => {
 
       <CopilotSidebar
         // RenderSuggestionsList={CustomSuggestionsList}
-        defaultOpen={true}
+        defaultOpen={false}
         labels={{
           welcomeMessageText:
             "👋 Hey there! I'm L.B.D's personal sidekick. What's on your mind?",
