@@ -3,8 +3,8 @@ import Link from "next/link";
 import { FolderCode, CircleUser, Lightbulb, Mail, X, Send } from "lucide-react";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import { CopilotSidebar } from "@copilotkit/react-core/v2";
-import { useCopilotReadable } from "@copilotkit/react-core";
+// import { CopilotSidebar } from "@copilotkit/react-core/v2";
+// import { useCopilotReadable } from "@copilotkit/react-core";
 
 const CustomSuggestionsList = ({ suggestions, onSuggestionClick }) => {
   // Fallback to static suggestions if none are provided
@@ -79,10 +79,10 @@ const PortfolioContent = () => {
   };
 
   // Make portfolio data available to AI
-  useCopilotReadable({
-    description: "L.B.D's portfolio information",
-    value: portfolioData,
-  });
+  // useCopilotReadable({
+  //   description: "L.B.D's portfolio information",
+  //   value: portfolioData,
+  // });
 
   return (
     <>
@@ -96,13 +96,16 @@ const PortfolioContent = () => {
               <h1 className="my-2 text-base text-[#00ff00]">Hello &#128075;</h1>
               <h1 className="my-2 text-xl md:text-3xl">I'm Lambe Boluwatife</h1>
               <h6 className="my-2 text-sm text-justify">
-                Frontend Engineer building scalable dashboards and real-time web applications with Next.js & TypeScript
+                Frontend Engineer building scalable dashboards and real-time web
+                applications with Next.js & TypeScript
               </h6>
               <h6 className="my-2 text-sm text-justify">
-              I specialize in building responsive, data-driven interfaces for modern products, including dashboards, authentication systems, and API-driven applications.
-               I also have hands-on experience developing intelligent AI agents using frameworks
-                like Mastra and OpenAI tools, bridging the gap between advanced
-                technology and modern frontend interfaces.
+                I specialize in building responsive, data-driven interfaces for
+                modern products, including dashboards, authentication systems,
+                and API-driven applications. I also have hands-on experience
+                developing intelligent AI agents using frameworks like Mastra
+                and OpenAI tools, bridging the gap between advanced technology
+                and modern frontend interfaces.
               </h6>
               <Link
                 href="/Lambe_Boluwatife_Frontend_Developer_CV.pdf"
@@ -157,7 +160,7 @@ const PortfolioContent = () => {
         <Footer />
       </main>
 
-      <CopilotSidebar
+      {/* <CopilotSidebar
         // RenderSuggestionsList={CustomSuggestionsList}
         defaultOpen={false}
         labels={{
@@ -419,7 +422,7 @@ You are Lambe Boluwatife's official portfolio assistant. Your role is to make su
           sendIcon: <Send size={16} className="text-[#00ff00]" />,
           closeIcon: <X size={16} className="text-[#00ff00]" />,
         }}
-      />
+      /> */}
     </>
   );
 };
