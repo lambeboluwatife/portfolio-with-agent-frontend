@@ -110,26 +110,28 @@ export default function Projects() {
     },
     {
       id: 4,
-      title: "Hirewave - Job Portal",
+      title: "Client Pulse",
       description:
-        "An job portal that connects job seekers with employers. Features job listings, resume upload, and job matching.",
+        "ClientPulse is a lightweight client communication tool built for freelancers. It replaces scattered progress updates sent over WhatsApp, email, and voice notes with a single shareable link. Freelancers post updates to a project timeline, and clients view everything instantly through a clean, public page, no login required.",
       problem:
-        "Difficulty for job seekers to track applications and find relevant matches in local markets.",
+        "Freelancers spend a disproportionate amount of time managing client communication rather than doing the actual work. The typical update cycle looks like this: a client sends any updates? over WhatsApp, the freelancer stops what they're doing to respond, the message gets buried, and the same conversation repeats three days later. There is no single source of truth, no transparency, and no professional paper trail. Existing tools like Notion, Trello, and ClickUp are either too complex for clients to navigate or require them to create an account, creating friction that kills adoption before it starts. The problem is not a lack of project management tools. It is a lack of a simple, client-facing communication layer.",
       role: "Frontend Developer",
       outcome:
-        "Designed a clean, intuitive UI with offline-first capabilities using Dexie.js for better persistence.",
-      image: "/images/hirewave.webp",
+        "Built and shipped a functional full-stack SaaS from scratch as a solo developer. Currently being tested by early users across active freelance projects. Core loop validated end-to-end, freelancers can create a project, post updates, and share a working public link within two minutes of signing up. Zero-friction client experience confirmed, clients can view live project timelines with no account, no onboarding, and no confusion",
+      image: "/images/clientpulse.webp",
       technologies: [
         "React",
-        "Dexie.js",
+        "Next.js",
         "Tailwind CSS",
         "JavaScript",
         "HTML5",
+        "Supabase",
+        "TypeScript"
       ],
-      category: ["frontend"],
-      liveUrl: "https://hirewave-merge.netlify.app/",
-      githubUrl: "https://github.com/lambeboluwatife/hirewave-merge",
-      date: "2023",
+      category: ["frontend", "fullstack"],
+      liveUrl: "https://clientpulse-jet.vercel.app/",
+      githubUrl: "https://github.com/lambeboluwatife/clientpulse",
+      date: "2026",
       status: "completed",
     },
     {

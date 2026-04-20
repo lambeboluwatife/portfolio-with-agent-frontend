@@ -96,19 +96,19 @@ const PortfolioContent = () => {
               <h1 className="my-2 text-base text-[#00ff00]">Hello &#128075;</h1>
               <h1 className="my-2 text-xl md:text-3xl">I'm Lambe Boluwatife</h1>
               <h6 className="my-2 text-sm text-justify">
-                I am a Frontend Developer specializing in React, Next.js, and
-                responsive UI design. I build clean, accessible, and
-                high-performance web applications with a focus on seamless API
-                integration and intuitive user experiences. I also have hands-on
-                experience developing intelligent AI agents using frameworks
+                Frontend Engineer building scalable dashboards and real-time web applications with Next.js & TypeScript
+              </h6>
+              <h6 className="my-2 text-sm text-justify">
+              I specialize in building responsive, data-driven interfaces for modern products, including dashboards, authentication systems, and API-driven applications.
+               I also have hands-on experience developing intelligent AI agents using frameworks
                 like Mastra and OpenAI tools, bridging the gap between advanced
                 technology and modern frontend interfaces.
               </h6>
               <Link
-                href="/Lambe_Boluwatife_Frontend_Developer.pdf"
+                href="/Lambe_Boluwatife_Frontend_Developer_CV.pdf"
                 rel="noreferrer"
                 target="_blank"
-                download="Lambe_Boluwatife_Frontend_Developer.pdf"
+                download="Lambe_Boluwatife_Frontend_Developer_CV.pdf"
                 className="mt-4 inline-block text-xs px-6 py-4 font-semibold bg-[#00ff00] text-black hover:bg-[#00cc00] transition duration-300"
               >
                 Download Resume
@@ -169,6 +169,7 @@ const PortfolioContent = () => {
           stopGenerating: "✋ Chill, stop!",
           regenerateResponse: "🔄 Give it another go!",
         }}
+         
         instructions={`
             You are "Portfolio Agent", an intelligent AI assistant dedicated to helping users explore and understand the comprehensive developer portfolio of Lambe Boluwatife. You serve as the official guide to his professional journey, technical expertise, projects, and personal story.
 
